@@ -15,10 +15,44 @@ main {
   margin: .25rem;
 }
 
+
+/** Styling for feather.svg */
 #feather-svg {
-  fill: #000;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+
+#feather-svg:hover {
+  transform: translateY(-.5rem);
+}
+
+.feather-piece {
+  fill: #000;  
+  transition: fill .2s ease-in;
+}
+
+#feather-svg:active .f-red {
+  fill: #CC0000;
+}
+
+#feather-svg:active .f-yel-ora {
+  fill: #FF9900;
+}
+
+#feather-svg:active .f-ora {
+  fill: #FF6600;
+}
+
+#feather-svg:active .f-yel {
+  fill: #FFCC33;
+}
+
+/** Styling for record_player.svg */
+#record_player-svg:hover {
   cursor: pointer;
 }
+
+
 
 @media screen and (min-width: 768px) {
   main {
