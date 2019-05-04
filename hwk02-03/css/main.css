@@ -52,7 +52,14 @@ main {
   cursor: pointer;
 }
 
+#rec-needle {
+  transition: transform .2s ease-in-out;
+  transform-origin: 87% 25%;
+}
 
+#record_player-svg:hover #rec-needle {
+  transform: rotate(5deg);
+}
 
 @media screen and (min-width: 768px) {
   main {
