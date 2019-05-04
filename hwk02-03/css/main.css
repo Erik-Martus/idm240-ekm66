@@ -15,6 +15,11 @@ main {
   margin: .25rem;
 }
 
+#feather-svg {
+  fill: #000;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   main {
     display: grid;
