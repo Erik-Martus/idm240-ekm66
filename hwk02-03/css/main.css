@@ -15,10 +15,13 @@ main {
   margin: .25rem;
 }
 
+.svg-img {
+  cursor: pointer;
+}
+
 
 /** Styling for feather.svg */
 #feather-svg {
-  cursor: pointer;
   transition: transform .3s ease-in-out;
 }
 
@@ -48,8 +51,9 @@ main {
 }
 
 /** Styling for record_player.svg */
-#record_player-svg:hover {
-  cursor: pointer;
+@keyframes spin {
+  from {transform: rotate(0);}
+  to {transform: rotate(360deg);}
 }
 
 #rec-needle {
@@ -59,6 +63,59 @@ main {
 
 #record_player-svg:hover #rec-needle {
   transform: rotate(5deg);
+}
+
+#record_player-svg:active #rec-needle {
+  transform: rotate(23deg);
+}
+
+#record {
+  transform-origin: 42%;
+}
+
+#record_player-svg:active #record {
+  animation: spin 1s linear .25s infinite both;
+}
+
+/** Styling for tgi_logo-workmark.svg */
+#tgi-the, #tgi-ghost, #tgi-inside {
+  transition: transform .1s ease-in-out;
+}
+
+#tgi_wordmark-svg:active #tgi-inside,
+#tgi_wordmark-svg:hover #tgi-inside {
+  transform: translateX(-3%);
+}
+
+#tgi_wordmark-svg:active #tgi-the,
+#tgi_wordmark-svg:hover #tgi-the {
+  transform: translateX(18%);
+}
+
+#tgi_wordmark-svg:active #tgi-ghost,
+#tgi_wordmark-svg:hover #tgi-ghost {
+  transform: translateX(3%);
+}
+
+/** Styling for tgi_logo-icon.svg */
+#tgi-icon-circle {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+#tgi_icon-svg:active #tgi-icon-circle,
+#tgi_icon-svg:hover #tgi-icon-circle {
+  opacity: 1;
+}
+
+#tgi-icon-bottom_tri {
+  transform: translateY(-13.32%);
+  transition: transform .2s ease-in-out;
+}
+
+#tgi_icon-svg:active #tgi-icon-bottom_tri,
+#tgi_icon-svg:hover #tgi-icon-bottom_tri {
+  transform: translateY(0);
 }
 
 @media screen and (min-width: 768px) {
