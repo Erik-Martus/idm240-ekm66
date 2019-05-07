@@ -118,7 +118,7 @@ main {
   transform: translateY(0);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   main {
     display: grid;
     grid-template-columns: repeat(2, 340px);
@@ -132,8 +132,14 @@ main {
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
   main {
     grid-template-columns: repeat(3, 340px);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main {
+    grid-template-columns: repeat(4, 340px);
   }
 }
