@@ -71,10 +71,12 @@ main {
 
 #record {
   transform-origin: 42%;
+  animation: spin 1s linear .25s infinite both;
+  animation-play-state: paused;
 }
 
 #record_player-svg:active #record {
-  animation: spin 1s linear .25s infinite both;
+  animation-play-state: running;
 }
 
 /** Styling for tgi_logo-workmark.svg */
