@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* 
+ ! Typekit Fonts !
+ ? Proxima Nova
+ font-family: proxima-nova,sans-serif;
+ font-weight: 300;
+ font-style: normal;
+
+ font-family: proxima-nova,sans-serif;
+ font-weight: 600;
+ font-style: normal;
+
+ font-family: proxima-nova,sans-serif;
+ font-weight: 900;
+ font-style: normal;
+
+ ! Colors !
+ * gray: #1f1f1f
+ * white: #F7F7F7
+*/
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #1F1F1F;
+  color: #1F1F1F;
+  font-family: proxima-nova, sans-serif;
+}
