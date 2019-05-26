@@ -16,32 +16,61 @@
 <body>
   <div id="wrapper">
     <div id="audio">
+      <!-- ! Speaker Icon ! -->
+      <svg id="speaker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.43 46">
+        <g id="speaker_icon">
+          <g id="border">
+            <path fill="#f7f7f7" d="M 34.2 2 V 44 h -26 V 2 h 26 m 2 -2 h -30 V 46 h 30 V 0 Z" />
+          </g>
+          <g id="cir_top">
+            <circle cx="21.2" cy="10" r="3.5" fill="#f7f7f7" />
+          </g>
+          <g id="cir_btm">
+            <circle cx="21.2" cy="31" r="10" fill="#f7f7f7" />
+          </g>
+          <g id="cross_out">
+            <rect width="56" height="4" x="-6.8" y="21" fill="#1f1f1f" transform="translate(-10.1,21.7) rotate(-45)" />
+            <rect width="56" height="2" x="-6.8" y="22" fill="#f7f7f7" transform="translate(-10.1,21.7) rotate(-45)" />
+          </g>
+        </g>
+      </svg>
+
       <div id="audio_info">
-        <img src="img/" alt="" srcset=""> <!-- TODO: Get album art of selected song -->
-        <h5></h5> <!-- ! Song name ! -->
-        <p>Off the album ...</p> <!-- ! Album name ! -->
+        <img src="img/tgi_gwyg_album-cover.jpg" alt="Get What You Give" srcset="">
+        <h5>Engine 45</h5>
+        <p>Off the album <i>Get What You Give</i></p>
       </div>
-      <!-- TODO: Make speaker an svg file, put here as inline svg -->
+      <audio src=""></audio>
+      <!-- TODO: Add audio file -->
     </div>
 
     <main role="main">
-      <h1>The <br /> Ghost <br /> Inside</h1>
+      <header>
+        <h1 id="band_name">
+          <span class="band item">The</span>
+          <span class="band item">Ghost</span>
+          <span class="band item">Inside</span>
+        </h1>
 
-      <section id="info">
-        <div id="date">
-          <h2>Saturday, July 13th</h2>
-        </div>
-        <div id="location">
-          <h3>The Shrine <br /> Los Angeles, CA</h3>
-        </div>
-        <div id="time">
-          <h4>Doors 7:30 | Show 8:30</h4>
-        </div>
-      </section>
+        <section id="info">
+          <div id="date" class="item">
+            <h2>Saturday, July 13th</h2>
+          </div>
+          <div id="loc_name">
+            <h3>
+              <span class="loc item">The Shrine</span>
+              <span class="loc item">Los Angeles, CA</span>
+            </h3>
+          </div>
+          <div id="time" class="item">
+            <h4>Doors 7:30 | Show 8:30</h4>
+          </div>
+        </section>
+      </header>
 
       <section id="links">
-        <a href="#" class="btn">Tickets</a> <!-- TODO: Add link to ticket page -->
-        <a href="#" class="btn">Website</a> <!-- TODO: Add link to ticket page -->
+        <span class="btn_container"><a href="#" class="btn">Tickets</a></span> <!-- TODO: Add link to ticket page -->
+        <span class="btn_container"><a href="#" class="btn">Website</a></span> <!-- TODO: Add link to ticket page -->
       </section>
 
       <section id="song_lyrics">
