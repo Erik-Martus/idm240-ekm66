@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.43 46">
+    <g id="speaker_icon">
+        <g id="speaker">
+            <g id="border">
+                <path fill="#f7f7f7" d="M 34.2 2 V 44 h -26 V 2 h 26 m 2 -2 h -30 V 46 h 30 V 0 Z"/>
+            </g>
+            <g id="cir_top">
+                <circle cx="21.2" cy="10" r="3.5" fill="#f7f7f7"/>
+            </g>
+            <g id="cir_btm">
+                <circle cx="21.2" cy="31" r="10" fill="#f7f7f7"/>
+            </g>
+            <g id="cross_out">
+                <rect width="56" height="4" x="-6.8" y="21" fill="#1f1f1f" transform="translate(-10.1,21.7) rotate(-45)"/>
+                <rect width="56" height="2" x="-6.8" y="22" fill="#f7f7f7" transform="translate(-10.1,21.7) rotate(-45)"/>
+            </g>
+        </g>
+    </g>
+</svg>
