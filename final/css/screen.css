@@ -53,11 +53,22 @@ main {
   border: 1px solid white;
   top: .25rem;
   right: .25rem;
+  z-index: 10;
 }
 
 #audio:hover {
-  background-color: #181818;
+  background-color: #3a3a3a;
+  width: 10rem;
 }
+
+#speaker {
+  height: 3.5rem;
+  /*! order: 2; */
+  position: absolute;
+  top: 0;
+  right: 0;
+ }
+ 
 
 #audio_info {
   opacity: 0;
