@@ -46,36 +46,56 @@ main {
   margin-top: 2rem;
 }
 
+h5 {
+  font-weight: 900;
+  letter-spacing: .05rem;
+}
+
 #audio {
+  background-color: #1F1F1F;
   position: absolute;
   height: 4rem;
   width: 3rem;
-  border: 1px solid white;
   top: .25rem;
   right: .25rem;
   z-index: 10;
+  padding: .25rem;
+  display: flex;
+  align-items: center;
+  color: #f7f7f7;
+  transition: width .2s ease-in, background-color .1s ease-in-out;
 }
 
 #audio:hover {
   background-color: #3a3a3a;
-  width: 10rem;
+  width: 14rem;
 }
 
 #speaker {
   height: 3.5rem;
-  /*! order: 2; */
   position: absolute;
-  top: 0;
+  top: .2rem;
   right: 0;
- }
- 
+}
 
 #audio_info {
   opacity: 0;
+  display: none;
+  transition: display .1s linear .2s, opacity .1s ease-in-out .3s;
+}
+
+.alb_name {
+  font-weight: 600;
+}
+
+#audio:hover #audio_info {
+  display: block;
+  opacity: 1;
 }
 
 #audio_info img {
   width: 2.8rem;
+  display: none;
 }
 
 #band_name {
@@ -181,9 +201,11 @@ main {
   }
 }
 
-.btn:hover::after {
+.btn::after {
+  width: 0;
   content: '';
-  animation: btn_transition .2s ease-in normal both;
+  transition: width .2s ease-in-out;
+  /* animation: btn_transition .2s ease-in normal both; */
   position: absolute;
   height: 2.25rem;
   background-color: #f7f7f7;
@@ -192,7 +214,11 @@ main {
   left: 0;
 }
 
-.btn_container:nth-of-type(even) .btn:hover::after {
+.btn:hover::after {
+  width: 10rem;
+}
+
+.btn_container:nth-of-type(even) .btn::after {
   left: unset;
   right: 0;
 }
