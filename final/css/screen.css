@@ -32,4 +32,156 @@ body {
   background-color: #1F1F1F;
   color: #1F1F1F;
   font-family: proxima-nova, sans-serif;
+  text-transform: uppercase;
+}
+
+header,
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+#audio {
+  position: absolute;
+  height: 4rem;
+  width: 3rem;
+  border: 1px solid white;
+  top: .25rem;
+  right: .25rem;
+}
+
+#audio:hover {
+  background-color: #181818;
+}
+
+#audio_info {
+  opacity: 0;
+}
+
+#audio_info img {
+  width: 2.8rem;
+}
+
+#band_name {
+  display: inline-flex;
+  font-weight: 900;
+  text-align: right;
+  font-size: 3rem;
+  justify-content: flex-end;
+  width: 10.875rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.item::after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+  background-color: #f7f7f7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.item {
+  display: inline-block;
+  width: unset;
+  padding: 0 .25rem;
+  position: relative;
+}
+
+.band::after {
+  height: 3rem;
+}
+
+#info {
+  font-size: 1.5rem;
+  width: 17.6rem;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+#date {
+  font-weight: 900;
+  width: 16.7rem;
+}
+
+#date::after {
+  height: 1.5rem;
+}
+
+#loc_name {
+  font-weight: 600;
+}
+
+.loc::after {
+  height: 1.5rem;
+}
+
+#time {
+  font-weight: 300;
+}
+
+#time::after {
+  height: 1.5rem;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  color: #f7f7f7;
+  font-size: 1.25rem;
+  text-decoration: none;
+  width: 10rem;
+  border: 1px solid #f7f7f7;
+  font-weight: 300;
+  padding: .5rem 0;
+  text-align: center;
+  margin-bottom: .5rem;
+  position: relative;
+  transition: color .2s ease-in;
+}
+
+.btn:hover {
+  color: #1F1F1F;
+}
+
+@keyframes btn_transition {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 10rem;
+  }
+}
+
+.btn:hover::after {
+  content: '';
+  animation: btn_transition .2s ease-in normal both;
+  position: absolute;
+  height: 2.25rem;
+  background-color: #f7f7f7;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.btn_container:nth-of-type(even) .btn:hover::after {
+  left: unset;
+  right: 0;
 }
