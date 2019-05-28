@@ -16,14 +16,17 @@
 <body>
   <div id="wrapper">
     <div id="audio">
-      <div id="audio_info">
+      <!-- <div id="audio_info" class="hidden">
         <img src="img/tgi_gwyg_album-cover.jpg" alt="Get What You Give" srcset="">
         <h5>Engine 45</h5>
         <p>Off the album <br />
           <span class="alb_name">Get What You Give</span></p>
       </div>
-      <audio src=""></audio>
-      <!-- TODO: Add audio file -->
+      <audio src=""></audio> -->
+      <!-- TODO: Add hover animation to audio info container -->
+      <audio id="music" src="media/tgi_engine45.mp3">
+        Sorry, your browser does not support audio playback.
+      </audio>
 
       <!-- ! Speaker Icon ! -->
       <svg id="speaker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.43 46">
@@ -37,7 +40,7 @@
           <g id="cir_btm">
             <circle cx="21.2" cy="31" r="10" fill="#f7f7f7" />
           </g>
-          <g id="cross_out">
+          <g id="cross_out" class="off">
             <rect width="56" height="4" x="-6.8" y="21" fill="#1f1f1f" transform="translate(-10.1,21.7) rotate(-45)" />
             <rect width="56" height="2" x="-6.8" y="22" fill="#f7f7f7" transform="translate(-10.1,21.7) rotate(-45)" />
           </g>
@@ -76,9 +79,27 @@
       </section>
 
       <section id="song_lyrics">
-        <span class="lyrics">
-          <h2>If it's a war you came to see you will never see a white flag waived in front of me</h2>
-        </span>
+        <div id="lyrics_mobile">
+          <h2>
+            <span class="lyr item">If it's a war</span>
+            <span class="lyr item">you came</span>
+            <span class="lyr item">to see you</span>
+            <span class="lyr item">will never</span>
+            <span class="lyr item">see a white</span>
+            <span class="lyr item">flag waived</span>
+            <span class="lyr item">in front of me</span>
+          </h2>
+        </div>
+        <div id="lyrics_tablet">
+          <h2>
+            <span class="lyr item">If it's a war you came</span>
+            <span class="lyr item">to see</span> <br />
+            <span class="lyr item">you will never</span>
+            <span class="lyr item">see a white</span>
+            <span class="lyr item">flag waived</span>
+            <span class="lyr item">in front of me</span>
+          </h2>
+        </div>
       </section>
     </main>
     <footer>
@@ -86,6 +107,8 @@
       <p>Song title &copy; The Ghost Inside YEAR</p>
     </footer>
   </div>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
