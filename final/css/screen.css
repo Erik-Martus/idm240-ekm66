@@ -289,16 +289,130 @@ h5 {
   height: 2rem;
 }
 
+@keyframes lyr_one-mobile {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: 0;
+  }
+
+  30% {
+    left: -.25rem;
+    width: 100%;
+  }
+
+  40% {
+    width: 0%;
+  }
+
+  59% {
+    left: -.75rem;
+  }
+
+  60% {
+    width: 0%;
+    left: 17rem;
+  }
+
+  80% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@keyframes lyr_two-mobile {
+  0% {
+    left: unset;
+    right: 0
+  }
+
+  25% {
+    right: 0;
+  }
+
+  30% {
+    right: -.25rem;
+    width: 100%;
+  }
+
+  40% {
+    width: 0%;
+  }
+
+  59% {
+    right: -.75rem;
+  }
+
+  60% {
+    width: 0%;
+    right: 17rem;
+  }
+
+  80% {
+    width: 100%;
+    right: 0;
+  }
+}
+
+@keyframes lyr_three-mobile {
+  0% {
+    left: unset;
+    right: 0
+  }
+
+  25% {
+    right: 0;
+    width: 100%
+  }
+
+  40% {
+    right: -3rem;
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  69% {
+    right: -3rem;
+  }
+
+  70% {
+    width: 0%;
+    right: 17rem;
+  }
+
+  90% {
+    width: 100%;
+    right: 0;
+  }
+}
+
 span.lyr:nth-child(1) {
   right: 1.5rem;
+}
+
+span.lyr:nth-child(1)::after {
+  animation: lyr_one-mobile 6s ease-in-out infinite forwards;
 }
 
 span.lyr:nth-child(2) {
   right: .75rem;
 }
 
+span.lyr:nth-child(2)::after {
+  animation: lyr_two-mobile 6s ease-in-out infinite forwards;
+}
+
 span.lyr:nth-child(3) {
   right: 1.75rem;
+}
+
+span.lyr:nth-child(3)::after {
+  animation: lyr_three-mobile 6s ease-in-out infinite forwards;
 }
 
 span.lyr:nth-child(4) {

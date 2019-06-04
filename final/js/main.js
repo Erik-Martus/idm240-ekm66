@@ -23,13 +23,14 @@
 
 var speaker = document.getElementById("speaker");
 var mute = document.getElementById("cross_out");
+var cir_btm = document.getElementById("cir_btm");
 
 var audioPlayer = document.getElementById('music');
 var sndPlaying = false;
 
-
-console.log(speaker);
-console.log(mute);
+function musicPlaying() {
+  var id = setInterval(frame, 5);
+}
 
 speaker.addEventListener('mousedown', () => {
   if (cross_out.classList.contains("off")) {
