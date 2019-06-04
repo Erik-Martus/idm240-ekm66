@@ -391,6 +391,146 @@ h5 {
   }
 }
 
+@keyframes lyr_four-mobile {
+  0% {
+    right: unset;
+    left: 0
+  }
+
+  25% {
+    left: 0;
+    width: 100%
+  }
+
+  40% {
+    left: -5rem;
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  69% {
+    left: -3rem;
+  }
+
+  70% {
+    width: 0%;
+    left: 16rem;
+  }
+
+  90% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@keyframes lyr_five-mobile {
+  0% {
+    left: unset;
+    right: 0
+  }
+
+  25% {
+    right: 0;
+    width: 100%
+  }
+
+  40% {
+    right: -2rem;
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  69% {
+    right: -2rem;
+  }
+
+  70% {
+    width: 0%;
+    right: 16rem;
+  }
+
+  90% {
+    width: 100%;
+    right: 0;
+  }
+}
+
+@keyframes lyr_six-mobile {
+  0% {
+    right: unset;
+    left: 0
+  }
+
+  25% {
+    left: 0;
+    width: 100%
+  }
+
+  40% {
+    left: -3rem;
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  69% {
+    left: -2rem;
+  }
+
+  70% {
+    width: 0%;
+    left: 18rem;
+  }
+
+  90% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@keyframes lyr_seven-mobile {
+  0% {
+    left: unset;
+    right: 0
+  }
+
+  25% {
+    right: 0;
+    width: 100%
+  }
+
+  40% {
+    right: -3rem;
+    width: 0%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  69% {
+    right: -2rem;
+  }
+
+  70% {
+    width: 0%;
+    right: 18rem;
+  }
+
+  90% {
+    width: 100%;
+    right: 0;
+  }
+}
+
 span.lyr:nth-child(1) {
   right: 1.5rem;
 }
@@ -419,12 +559,28 @@ span.lyr:nth-child(4) {
   left: 1rem;
 }
 
+span.lyr:nth-child(4)::after {
+  animation: lyr_four-mobile 6s ease-in-out infinite forwards;
+}
+
 span.lyr:nth-child(5) {
   right: .5rem;
 }
 
+span.lyr:nth-child(5)::after {
+  animation: lyr_five-mobile 6s ease-in-out infinite forwards;
+}
+
 span.lyr:nth-child(6) {
   left: 1.25rem;
+}
+
+span.lyr:nth-child(6)::after {
+  animation: lyr_six-mobile 6s ease-in-out infinite forwards;
+}
+
+span.lyr:nth-child(7)::after {
+  animation: lyr_seven-mobile 6s ease-in-out infinite forwards;
 }
 
 #lyrics_tablet {
@@ -513,6 +669,38 @@ footer>p:nth-child(1) {
     width: 28rem;
   }
 
+  @keyframes lyr_one-mobile {
+    0% {
+      left: 0;
+    }
+
+    25% {
+      left: 0;
+    }
+
+    30% {
+      left: -.25rem;
+      width: 100%;
+    }
+
+    40% {
+      width: 0%;
+    }
+
+    59% {
+      left: -.75rem;
+    }
+
+    60% {
+      width: 0%;
+      left: 28rem;
+    }
+
+    80% {
+      width: 100%;
+      left: 0;
+    }
+  }
 
   span.lyr:nth-child(2) {
     left: 2.75rem;
