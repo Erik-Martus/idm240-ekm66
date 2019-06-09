@@ -95,6 +95,28 @@ h5 {
   opacity: 1;
 }
 
+@keyframes speaker_play {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(.5, .5);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+#cir_btm circle {
+  transform-origin: 50% 50%;
+  /* transform: scale(.5 .5) */
+  animation: speaker_play 2s linear infinite forwards;
+}
+
+/* #cir_btm.on {} */
+
 /* ? Styling for #audio_info when hovering on #audio */
 /* .hidden {
   transition: display .1s linear .4s, opacity .45s ease-in-out .3s;
