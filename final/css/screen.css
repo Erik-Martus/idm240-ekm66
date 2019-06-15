@@ -58,6 +58,10 @@ h5 {
   letter-spacing: .05rem;
 }
 
+.hidden {
+  opacity: 0 !important;
+}
+
 #audio {
   background-color: #1F1F1F;
   position: absolute;
@@ -100,8 +104,80 @@ h5 {
     transform: scale(1, 1);
   }
 
+  5% {
+    transform: scale(.75, .75);
+  }
+
+  10% {
+    transform: scale(.8, .8);
+  }
+
+  15% {
+    transform: scale(.9, .9);
+  }
+
+  20% {
+    transform: scale(.8, .8);
+  }
+
+  25% {
+    transform: scale(.75, .75);
+  }
+
+  30% {
+    transform: scale(.95, .95);
+  }
+
+  35% {
+    transform: scale(.8, .8);
+  }
+
+  40% {
+    transform: scale(.9, .9);
+  }
+
+  45% {
+    transform: scale(.75, .75);
+  }
+
   50% {
-    transform: scale(.5, .5);
+    transform: scale(.8, .8);
+  }
+
+  55% {
+    transform: scale(.75, .75);
+  }
+
+  60% {
+    transform: scale(.95, .95);
+  }
+
+  65% {
+    transform: scale(.75, .75);
+  }
+
+  70% {
+    transform: scale(1, 1);
+  }
+
+  75% {
+    transform: scale(.75, .75);
+  }
+
+  80% {
+    transform: scale(.95, .95);
+  }
+
+  85% {
+    transform: scale(.8, .8);
+  }
+
+  90% {
+    transform: scale(.75, .75);
+  }
+
+  95% {
+    transform: scale(.9, .9);
   }
 
   100% {
@@ -109,13 +185,10 @@ h5 {
   }
 }
 
-#cir_btm circle {
-  transform-origin: 50% 50%;
-  /* transform: scale(.5 .5) */
-  animation: speaker_play 2s linear infinite forwards;
+#cir_btm.play circle {
+  transform-origin: 50% 78%;
+  animation: speaker_play 3.5s linear infinite forwards;
 }
-
-/* #cir_btm.on {} */
 
 /* ? Styling for #audio_info when hovering on #audio */
 /* .hidden {
@@ -152,6 +225,28 @@ h5 {
   width: 10.875rem;
   flex-wrap: wrap;
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+#band_name .band:nth-of-type(2)::after {
+  left: unset !important;
+  right: 0;
+}
+
+#band_name:hover .band:first-of-type::after {
+  width: 90%;
+}
+
+#band_name:hover .band:nth-of-type(2)::after {
+  width: 90%;
+}
+
+#band_name:hover .band:last-of-type::after {
+  width: 90%;
+}
+
+#band_name.tap .band::after {
+  width: 0% !important;
 }
 
 .item::after {
@@ -174,6 +269,7 @@ h5 {
 
 .band::after {
   height: 3rem;
+  transition: width .2s ease-in-out;
 }
 
 /* ! ----- TGI Logo ----- ! */
@@ -181,14 +277,19 @@ h5 {
   position: absolute;
   height: 9rem;
   z-index: -10;
-  display: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity .2s ease-in-out;
 }
 
+/* * Base Classes * */
 .st0 {
   fill: #1F1F1F;
   stroke: #F7F7F7;
   stroke-width: 25;
   stroke-miterlimit: 10;
+  transform: rotate(270deg);
+  transform-origin: 50% 50%;
 }
 
 .st1 {
@@ -196,6 +297,30 @@ h5 {
   stroke: #F7F7F7;
   stroke-width: 16;
   stroke-miterlimit: 10;
+}
+
+/* * Modified Default States * */
+#cir {
+  stroke-dasharray: 1100;
+  stroke-dashoffset: -1100;
+  transition: stroke-dashoffset .5s ease-in-out .4s;
+}
+
+#tri_btm {
+  transform: translateY(-51px);
+  transition: transform .5s ease-in-out .25s;
+}
+
+#logo.mobile {
+  opacity: 1;
+}
+
+#logo.mobile #tri_btm {
+  transform: translateY(0);
+}
+
+#logo.mobile #cir {
+  stroke-dashoffset: 0;
 }
 
 #info {
@@ -674,9 +799,9 @@ footer>p:nth-child(1) {
 
   #logo {
     position: static;
-    display: block;
     height: 20rem;
     margin-bottom: 2rem;
+    opacity: 1;
   }
 
   #lyrics_mobile {
