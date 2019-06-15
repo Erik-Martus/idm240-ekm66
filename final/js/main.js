@@ -54,10 +54,13 @@ speaker.addEventListener('mousedown', () => {
 // ! Band Name and Logo Animation
 var bandName = document.getElementById("band_name");
 var logo = document.getElementById("logo");
+var logoCont = document.getElementById("logo-cont");
+console.log(logo);
+var circle = document.getElementById("cir");
 
 function nameLogo_mobile(x) {
   if (x.matches) { // Executes on mobile
-    bandName.addEventListener('mousedown', () => {
+    bandName.addEventListener('click', () => {
       if (bandName.classList.contains("tap")) {
         logo.classList.remove("mobile");
         console.log(logo);
@@ -76,8 +79,32 @@ function nameLogo_mobile(x) {
         }, 300);
       }
     }, false);
-  } else { // Executes on tablet and larger
+  } else {
 
+    logo.addEventListener('mouseenter', () => {
+      console.log(circle);
+      if (circle.classList.contains("load")) {
+        circle.classList.remove("load");
+        circle.classList.add("hover");
+      } else {
+        circle.classList.remove("hover");
+        setTimeout(() => {
+          circle.classList.add("hover");
+        }, 1);
+      }
+    }, false);
+
+    logoCont.addEventListener('touchstart', () => {
+      if (circle.classList.contains("load")) {
+        circle.classList.remove("load");
+        circle.classList.add("hover");
+      } else {
+        circle.classList.remove("hover");
+        setTimeout(() => {
+          circle.classList.add("hover");
+        }, 10);
+      }
+    }, false);
   }
 }
 

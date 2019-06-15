@@ -228,22 +228,27 @@ h5 {
   cursor: pointer;
 }
 
+.band::after {
+  height: 3rem;
+  transition: width .2s ease-in-out;
+}
+
 #band_name .band:nth-of-type(2)::after {
   left: unset !important;
   right: 0;
 }
 
-#band_name:hover .band:first-of-type::after {
+#band_name:hover .band::after {
   width: 90%;
 }
 
-#band_name:hover .band:nth-of-type(2)::after {
+/* #band_name:hover .band:nth-of-type(2)::after {
   width: 90%;
 }
 
 #band_name:hover .band:last-of-type::after {
   width: 90%;
-}
+} */
 
 #band_name.tap .band::after {
   width: 0% !important;
@@ -267,19 +272,18 @@ h5 {
   position: relative;
 }
 
-.band::after {
-  height: 3rem;
-  transition: width .2s ease-in-out;
-}
 
 /* ! ----- TGI Logo ----- ! */
 #logo {
-  position: absolute;
-  height: 9rem;
-  z-index: -10;
   opacity: 0;
+  height: 9rem;
   cursor: pointer;
   transition: opacity .2s ease-in-out;
+}
+
+#logo-cont {
+  position: absolute;
+  z-index: -10;
 }
 
 /* * Base Classes * */
@@ -766,6 +770,15 @@ footer>p:nth-child(1) {
   #band_name {
     margin-right: 1rem;
     margin-bottom: 0;
+    cursor: text;
+  }
+
+  #band_name:hover .band::after {
+    width: 100%;
+  }
+
+  .hidden {
+    opacity: 1 !important;
   }
 
   #info {
@@ -797,11 +810,72 @@ footer>p:nth-child(1) {
     margin-bottom: 0;
   }
 
-  #logo {
-    position: static;
+  #logo-cont #logo {
     height: 20rem;
-    margin-bottom: 2rem;
     opacity: 1;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  #logo-cont {
+    position: static;
+    margin-bottom: 2rem;
+    z-index: 100;
+  }
+
+  @keyframes tri_btm_load {
+    0% {
+      transform: translateY(-51px)
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #tri_btm {
+    animation: tri_btm_load .6s ease-in-out forwards;
+  }
+
+  #cir {
+    stroke-dashoffset: 0;
+  }
+
+  @keyframes cir_load {
+    0% {
+      stroke-dashoffset: -1100;
+    }
+
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+  #cir.load {
+    animation: cir_load .6s ease-in-out .1s forwards;
+  }
+
+  @keyframes cir_hover {
+    0% {
+      stroke-dashoffset: 0;
+    }
+
+    45% {
+      stroke-dashoffset: 1100;
+    }
+
+    55% {
+      stroke-dashoffset: 1100;
+    }
+
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  #cir.hover {
+    animation: cir_hover 2s ease-in-out forwards;
   }
 
   #lyrics_mobile {
